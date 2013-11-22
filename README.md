@@ -8,9 +8,13 @@ Getting a node.js application running with base pages.
 
 ## Github/Meetup API Team
 
+* Working on a tool to ID "active" Node.dc members by mashing github and meetup apis.
+
 ## Blog Aggregator Team
 
-### Features
+Creating a "common blog" akin to the debunk [planetnodejs.com](https://twitter.com/planetnodejs)
+
+### Parts
 
 1. Page to submit rss feed
 2. Feed of our own!
