@@ -10,6 +10,14 @@ Getting a node.js application running with base pages.
 
 ## Blog Aggregator Team
 
+### Features
+
+1. Page to submit rss feed
+2. Feed of our own!
+3. Some way to validate the request
+4. Something to checks the feeds
+5. Something that groups posts and maybe trims out posts?
+
 ## Other Features
 
 * Active Members
