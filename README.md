@@ -1,43 +1,34 @@
-node.dc
-=======
+# Node.dc Community Website
 
 Thoughts and ideas for node.dc website.
 
-Core Team
----------
+## Core Team
 
 Getting a node.js application running with base pages.
 
-Github API Team
----------------
+## Github/Meetup API Team
 
-Blog Aggregator Team
---------------------
+## Blog Aggregator Team
 
-Other Features
---------------
+## Other Features
+
 * Active Members
 * Active Projects
 * Announcements (with auto-expire)
 * Member profile
 
-Q&A Section
--------------
+## Q&A Section
+
 * Shout out for help
 
-IRC Integration
----------------
+## IRC Integration
 
-Idea Pitching
--------------
+## Idea Pitching
 
-
-Slogan
-------
+## Slogan
 
 Changing DC one node at a time.
 
-Contributors
-------------
+## Contributors
 
 We are looking for contibutors! Please email josh@jfin.us to be added to the groub.
