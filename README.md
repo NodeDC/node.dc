@@ -37,9 +37,22 @@ Creating a "common blog" akin to the debunk [planetnodejs.com](https://twitter.c
 
 ## Idea Pitching
 
+## Monthly Challenge
+
+This will be a coding challenge that will give clear acceptance criteria on a successful submission.  All challenges should be accomplished within a short amount of time, but is open to interpretation which allows the developer room for creativity and to showcase epic coding abilities and style.
+
+* +1 Voting system
+
+* Must be authenticated to submit or vote
+
+* Encourage creative out of the box thinking and style
+
+* Winners of the challenge are eligible to submit future challenges and be invited to be a tie breaking judge
+
+
 ## Slogan
 
-Changing DC one node at a time.
+Changing DC one Node at a time.
 
 ## Contributors
 
