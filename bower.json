@@ -1,0 +1,25 @@
+{
+  "name": "node.dc-website",
+  "version": "0.0.1",
+  "homepage": "https://github.com/joshfinnie/node.dc",
+  "authors": [
+    "Node.DC <@nodedc>"
+  ],
+  "description": "Node.DC website leveraging many technologies.",
+  "main": "server.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.2",
+    "angular-route": "~1.2.2",
+    "bootstrap": "~3.0.2"
+  }
+}
