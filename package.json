@@ -1,0 +1,59 @@
+{
+  "name": "node.dc-website",
+  "version": "0.0.1",
+  "description": "Node.DC website leveraging many technologies.",
+  "main": "app.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NodeDC/node.dc.git"
+  },
+  "author": "Node.DC <@NodeDC>",
+  "contributors": [
+    {
+      "name": "Will Laurance",
+      "github": "wlaurance",
+	    "email": "w.laurance@gmail.com"
+    },
+    {
+      "name": "Matthew Chase Whittemore",
+      "github": "mcwhittemore",
+	    "email": "mcwhittemore@gmail.com"
+    },
+    {
+      "name": "Alan Lee",
+      "github": "juxta52",
+      "email": "juxta52@gmail.com"
+    },
+    {
+      "name": "Josh Finnie",
+      "github": "joshfinnie",
+      "email": "josh@jfin.us"
+    },
+    {
+      "name": "",
+      "github": "KSolow",
+      "email": ""
+    },
+    {
+      "name": "",
+      "github": "sthalluri",
+      "email": ""
+    },
+    {
+      "name": "",
+      "github": "interpfister",
+      "email": ""
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NodeDC/node.dc/issues"
+  },
+  "homepage": "https://github.com/NodeDC/node.dc",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
