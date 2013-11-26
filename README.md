@@ -50,4 +50,4 @@ Changing DC one Node at a time.
 
 ## Contributors
 
-We are looking for contibutors! Please email josh@jfin.us to be added to the groub.
+We are looking for contibutors! Please email josh@jfin.us to be added to the group.
