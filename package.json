@@ -2,7 +2,7 @@
   "name": "node.dc-website",
   "version": "0.0.1",
   "description": "Node.DC website leveraging many technologies.",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": ""
   },

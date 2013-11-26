@@ -1,0 +1,28 @@
+h2 Contact
+
+div(ng-controller='ContactCtrl')
+
+  form(role='form')
+    .form-group
+        label(for='userEmail') Email address
+        input#userEmail.form-control(type='email', placeholder='Enter email' ng-model='userEmail')
+      .form-group
+        label(for='userComment') Comment
+        textarea#userComment.form-control(ng-model='userComment')
+      .checkbox
+        label
+          input(type='checkbox' ng-model='userCheck')
+          | Agree to be contacted by Node.DC
+      button.btn.btn-primary(type='submit' ng-click='userSubmit()') Submit
+
+  hr
+
+  h3 Sample Output
+  p Hit Submit above to run...
+
+  pre(ng-show='userSubmitted')
+    p Hello Node.DC,
+    | A user with email {{ userEmail }} has left the following comment:
+    blockquote {{ userComment }}
+    <span ng-show='userCheck'>The user is willing to be contacted.</span>
+    <span ng-hide='userCheck'>The user does not want to be contacted.</span>
