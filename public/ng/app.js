@@ -1,33 +1,33 @@
-'use strict';
-
+/*global angular */
 /*******************************************************************************
  * Declare app level module which depends on filters, and services
  ******************************************************************************/
 
 angular.module('nodeDC', [
-  'ngRoute',
-  'nodeDC.controllers',
-  'nodeDC.filters',
-  'nodeDC.services',
-  'nodeDC.directives'
+    'ngRoute',
+    'nodeDC.controllers',
+    'nodeDC.filters',
+    'nodeDC.services',
+    'nodeDC.directives'
 ])
 .config(function ($routeProvider, $locationProvider) {
-  $routeProvider
+    'use strict';
+    $routeProvider
     .when('/', {
-      templateUrl: 'partials/partialHome',
-      controller: 'HomeCtrl'
+        templateUrl: 'partials/partialHome',
+        controller: 'HomeCtrl'
     })
     .when('/about', {
-      templateUrl: 'partials/partialAbout',
-      controller: 'AboutCtrl'
+        templateUrl: 'partials/partialAbout',
+        controller: 'AboutCtrl'
     })
     .when('/contact', {
-      templateUrl: 'partials/partialContact',
-      controller: 'ContactCtrl'
+        templateUrl: 'partials/partialContact',
+        controller: 'ContactCtrl'
     })
     .otherwise({
-      redirectTo: '/'
+        redirectTo: '/'
     });
 
-  $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 });

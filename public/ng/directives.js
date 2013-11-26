@@ -1,12 +1,12 @@
-'use strict';
-
+/*global angular */
 /*******************************************************************************
  * Directives
  ******************************************************************************/
 
 angular.module('nodeDC.directives', [])
-  .directive('appVersion', function (version) {
-    return function(scope, elm, attrs) {
-      elm.text(version);
-    };
-  });
+    .directive('appVersion', function (version) {
+        'use strict';
+        return function(scope, elm) {
+            elm.text(version);
+        };
+    });

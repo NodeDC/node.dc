@@ -1,10 +1,10 @@
+/* jslint node:true */
 /*******************************************************************************
  * Module Dependencies
  ******************************************************************************/
 var express = require('express');
 var routes = require('./routes');
 var api = require('./routes/api');
-var http = require('http');
 var path = require('path');
 
 var app = module.exports = express();
@@ -43,5 +43,6 @@ app.get('*', routes.index);
  * Start Server
  ******************************************************************************/
 app.listen(app.get('port'), function () {
-  console.log('Express server listening on port ' + app.get('port'));
+    'use strict';
+    console.log('Express server listening on port ' + app.get('port'));
 });
