@@ -31,6 +31,16 @@ html(ng-app="nodeDC")
               a(href='about') About
             li
               a(href='contact') Contact
+          form.navbar-form.navbar-right
+            .form-group
+              input#username.form-control(type='text' placeholder='Username')
+            .form-group
+              p |
+            .form-group
+              input#password.form-control(type='password' placeholder='Password')
+            .form-group
+              p |
+            button.btn.btn-success(type='submit') Sign in
 
     .container
       block body

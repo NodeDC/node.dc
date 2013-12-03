@@ -2,25 +2,25 @@ h2#header Contact
 
 div(ng-controller='ContactCtrl')
 
-  form(role='form')
+  form(role='form' name='contactForm')
     .form-group
         label(for='userEmail') Email address
-        input#userEmail.form-control(type='email', placeholder='Enter email' ng-model='userEmail')
+        input#userEmail.form-control(type='email', placeholder='Enter email' ng-model='userEmail' required)
       .form-group
         label(for='userComment') Comment
-        textarea#userComment.form-control(ng-model='userComment')
+        textarea#userComment.form-control(ng-model='userComment' required)
       .checkbox
         label
           input(type='checkbox' ng-model='userCheck')
           | Agree to be contacted by Node.DC
-      button.btn.btn-primary(type='submit' ng-click='userSubmit()') Submit
+      button.btn.btn-primary(type='submit' ng-click='userSubmit()' ng-disabled='contactForm.$invalid') Submit
 
   hr
 
   h3 Sample Output
   p Hit Submit above to run...
 
-  pre(ng-show='userSubmitted')
+  pre(ng-show='userSubmitted' id='testSubmission')
     p Hello Node.DC,
     | A user with email {{ userEmail }} has left the following comment:
     blockquote {{ userComment }}

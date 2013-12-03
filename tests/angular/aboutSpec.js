@@ -1,10 +1,16 @@
 describe('About Page', function() {
+    var ptor = protractor.getInstance();
+
     beforeEach(function() {
-        browser.get('/about');
+        ptor.get('/about');
+    });
+
+    it("should be on the homepage", function() {
+        expect(ptor.getCurrentUrl()).toContain('/about');
     });
 
     it("should have the correct header", function() {
-        var header = element(by.id('header'));
-        expect(header.getText()).toBe('About');
+        var headerText = ptor.findElement(protractor.By.id('header')).getText();
+        expect(headerText).toEqual('About');
     });
 });
