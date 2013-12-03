@@ -24,7 +24,6 @@ app.use(app.router);
 app.use(express.errorHandler()); // For Development Purposes Only
 app.locals.pretty = true; // For Development Purposes Only
 
-
 /*******************************************************************************
  * Routes
  ******************************************************************************/
