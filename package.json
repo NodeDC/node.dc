@@ -63,6 +63,10 @@
   },
   "devDependencies": {
     "bower": "~1.2.7",
-    "protractor": "~0.13.0"
+    "protractor": "~0.13.0",
+    "grunt-cli": "~0.1.11",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-protractor-runner": "~0.1.10"
   }
 }
