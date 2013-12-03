@@ -14,13 +14,13 @@ describe('Home Page', function() {
         expect(headerText).toEqual('Home');
     });
 
-    it("should have a working About page link", function() {
+    it("should have a working about page link", function() {
         var aboutLink = ptor.findElement(protractor.By.linkText('About'));
         aboutLink.click();
         expect(ptor.getCurrentUrl()).toContain('/about');
     });
 
-    it("should have a working Contact page link", function() {
+    it("should have a working contact page link", function() {
         var contactLink = ptor.findElement(protractor.By.linkText('Contact'));
         contactLink.click();
         expect(ptor.getCurrentUrl()).toContain('/contact');

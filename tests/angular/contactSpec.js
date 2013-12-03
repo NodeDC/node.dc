@@ -7,7 +7,7 @@ describe('Conact Page', function() {
         ptor.get('/contact');
     });
 
-    it("should be on the homepage", function() {
+    it("should be on the contact page", function() {
         expect(ptor.getCurrentUrl()).toContain('/contact');
     });
 

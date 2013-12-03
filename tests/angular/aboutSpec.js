@@ -5,7 +5,7 @@ describe('About Page', function() {
         ptor.get('/about');
     });
 
-    it("should be on the homepage", function() {
+    it("should be on the about page", function() {
         expect(ptor.getCurrentUrl()).toContain('/about');
     });
 
