@@ -9,3 +9,8 @@ exports.name = function (req, res) {
         name: 'Node.DC'
     });
 };
+
+exports.rss = function(req, res){
+	'use strict';
+	
+}
