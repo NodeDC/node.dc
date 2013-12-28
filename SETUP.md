@@ -10,6 +10,10 @@ Check Node/NPM versions:
     $ npm --version
     1.3.14
 
+Install Grunt-CLI:
+
+    $ npm install -g grunt-cli
+
 Install required packages:
 
     $ npm install
@@ -32,7 +36,7 @@ Once that command is run, the updated versions of the libraries will be found in
     $ cp -r public/lib/angular-route/angular-route.min.js public/js/
 
 ### Going Forward
-This website is leveraging both [Node.js](http://nodejs.org) and [Angular.js](http://angularjs.org/). Node.js will be used for an API interface to Angular.js so that we can use both of these technologies to their full advantages. 
+This website is leveraging both [Node.js](http://nodejs.org) and [Angular.js](http://angularjs.org/). Node.js will be used for an API interface to Angular.js so that we can use both of these technologies to their full advantages.
 
 Currently, in `routes/api.js` we have a simple "API" call returning a name to use within the Angular.js partials. In the future, all APIs will be written in Node.js feeding the Angular.js app.
 
