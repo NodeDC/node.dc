@@ -4,8 +4,14 @@
  ******************************************************************************/
 var express = require('express');
 var routes = require('./routes');
-var api = require('./routes/api');
 var path = require('path');
+
+/*******************************************************************************
+ * APIs
+ ******************************************************************************/
+var home = require('./routes/api/home');
+var meetup = require('./routes/api/meetup');
+
 
 var app = module.exports = express();
 
@@ -33,7 +39,8 @@ app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 
 // JSON API
-app.get('/api/name', api.name);
+app.get('/api/name', home.name);
+app.get('/api/meetups', meetup.meetups);
 
 // Redirect all others to the index (HTML5 history)
 app.get('*', routes.index);

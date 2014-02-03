@@ -1,0 +1,7 @@
+h2#header Meetups
+
+div(ng-controller='MeetupsCtrl')
+  p This is a list of upcoming meetups.
+
+  ul
+    li(ng-repeat="meetup in meetups") <a href="{{ meetup.event_url }}">{{meetup.name }} @ {{meetup.venue.name}} {{ meetup.time | date:'medium' }}</a><br> {{ meetup.description }}<br>{{ meetup }}

@@ -28,4 +28,14 @@ angular.module('nodeDC.controllers', [])
         $scope.userSubmit = function() {
             $scope.userSubmitted = true;
         };
+    })
+    .controller('MeetupsCtrl', function ($scope, $http) {
+        'use strict';
+        $http({
+            method: 'GET',
+            url: '/api/meetups'
+        })
+        .success(function (data) {
+            $scope.meetups = data.results;
+        });
     });

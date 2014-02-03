@@ -22,7 +22,7 @@ describe('Conact Page', function() {
     });
 
     it("should fill out the form correctly", function() {
-        ptor.findElement(protractor.By.model('userEmail')).sendKeys('test@test.local');
+        ptor.findElement(protractor.By.model('contactForm.email')).sendKeys('test@test.local');
         ptor.findElement(protractor.By.id('userComment')).sendKeys('This is a test comment.');
         ptor.findElement(protractor.By.css('Button[ng-click^="userSubmit"')).click();
         ptor.waitForAngular();

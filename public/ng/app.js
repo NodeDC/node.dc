@@ -25,6 +25,10 @@ angular.module('nodeDC', [
         templateUrl: 'partials/partialContact',
         controller: 'ContactCtrl'
     })
+    .when('/meetups', {
+        templateUrl: 'partials/partialMeetups',
+        controller: 'MeetupsCtrl'
+    })
     .otherwise({
         redirectTo: '/'
     });

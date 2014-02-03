@@ -5,13 +5,13 @@ div(ng-controller='ContactCtrl')
   form(role='form' name='contactForm')
     .form-group
         label(for='userEmail') Email address
-        input#userEmail.form-control(type='email', placeholder='Enter email' ng-model='userEmail' required)
+        input#userEmail.form-control(type='email', placeholder='Enter email' ng-model='contactForm.email' required)
       .form-group
         label(for='userComment') Comment
-        textarea#userComment.form-control(ng-model='userComment' required)
+        textarea#userComment.form-control(ng-model='contactForm.comment' required)
       .checkbox
         label
-          input(type='checkbox' ng-model='userCheck')
+          input(type='checkbox' ng-model='contactForm.agree')
           | Agree to be contacted by Node.DC
       button.btn.btn-primary(type='submit' ng-click='userSubmit()' ng-disabled='contactForm.$invalid') Submit
 
@@ -22,7 +22,7 @@ div(ng-controller='ContactCtrl')
 
   pre(ng-show='userSubmitted' id='testSubmission')
     p Hello Node.DC,
-    | A user with email {{ userEmail }} has left the following comment:
-    blockquote {{ userComment }}
-    <span ng-show='userCheck'>The user is willing to be contacted.</span>
-    <span ng-hide='userCheck'>The user does not want to be contacted.</span>
+    | A user with email {{ contactForm.email }} has left the following comment:
+    blockquote {{ contactForm.comment }}
+    <span ng-show='contactForm.agree'>The user is willing to be contacted.</span>
+    <span ng-hide='contactForm.agree'>The user does not want to be contacted.</span>
