@@ -4,34 +4,38 @@
  ******************************************************************************/
 
 angular.module('nodeDC', [
-    'ngRoute',
+    'ui.router',
+    'ui.bootstrap',
     'nodeDC.controllers',
     'nodeDC.filters',
     'nodeDC.services',
     'nodeDC.directives'
 ])
-.config(function ($routeProvider, $locationProvider) {
+.config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
     'use strict';
-    $routeProvider
-    .when('/', {
+    $stateProvider
+    .state('home', {
+        url: '/',
         templateUrl: 'partials/partialHome',
         controller: 'HomeCtrl'
     })
-    .when('/about', {
+    .state('about', {
+        url: '/about',
         templateUrl: 'partials/partialAbout',
         controller: 'AboutCtrl'
     })
-    .when('/contact', {
+    .state('contact', {
+        url: '/contact',
         templateUrl: 'partials/partialContact',
         controller: 'ContactCtrl'
     })
-    .when('/meetups', {
+    .state('meetups', {
+        url: '/meetups',
         templateUrl: 'partials/partialMeetups',
         controller: 'MeetupsCtrl'
     })
-    .otherwise({
-        redirectTo: '/'
-    });
+    
+    $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
 });

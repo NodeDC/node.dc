@@ -18,8 +18,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.2",
-    "angular-route": "~1.2.2",
-    "bootstrap": "~3.0.2"
+    "angular": "1.2.11",
+    "angular-ui-router": "0.2.8-bowratic-tedium",
+    "angular-bootstrap": "0.10.0"
   }
 }
