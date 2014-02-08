@@ -4,7 +4,7 @@
  ******************************************************************************/
 
 angular.module('nodeDC.controllers', [])
-    .controller('HomeCtrl', function ($scope, $http) {
+    .controller('HomeCtrl', function ($scope, $http, Chat) {
         'use strict';
         $http({
             method: 'GET',
@@ -16,6 +16,8 @@ angular.module('nodeDC.controllers', [])
         .error(function () {
             $scope.name = 'Error!';
         });
+
+        $scope.lines = Chat.getLines();
     })
     .controller('AboutCtrl', function () {
         'use strict';

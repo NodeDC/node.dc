@@ -14,6 +14,9 @@ var meetup = require('./routes/api/meetup');
 
 
 var app = module.exports = express();
+var http = require('http');
+var server = http.createServer(app);
+var socketio = require('socket.io').listen(server, {log: false});
 
 /*******************************************************************************
  * Configuration
@@ -48,7 +51,10 @@ app.get('*', routes.index);
 /*******************************************************************************
  * Start Server
  ******************************************************************************/
-app.listen(app.get('port'), function () {
+server.listen(app.get('port'), function () {
     'use strict';
     console.log('Express server listening on port ' + app.get('port'));
 });
+
+require('./routes/api/irc/irc')(socketio);
+
