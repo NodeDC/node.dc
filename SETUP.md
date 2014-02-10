@@ -10,13 +10,18 @@ Check Node/NPM versions:
     $ npm --version
     1.3.14
 
-Install Grunt-CLI:
+Install Grunt-CLI & Bower globally.:
 
     $ npm install -g grunt-cli
+    $ npm install -g bower
 
 Install required packages:
 
     $ npm install
+    
+Install required resources
+
+    $ bower install
 
 Serve website:
 
