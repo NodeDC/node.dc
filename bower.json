@@ -20,6 +20,7 @@
   "dependencies": {
     "angular": "1.2.11",
     "angular-ui-router": "0.2.8-bowratic-tedium",
-    "angular-bootstrap": "0.10.0"
+    "angular-bootstrap": "0.10.0",
+    "jquery": "1.11.0"
   }
 }
