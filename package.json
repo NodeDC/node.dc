@@ -64,7 +64,6 @@
     "passport-local": "~0.1.6",
     "request": "~2.29.0",
     "irc": "~0.3.6",
-    "engine.io": "~0.8.2",
     "socket.io": "~0.9.16"
   },
   "devDependencies": {
