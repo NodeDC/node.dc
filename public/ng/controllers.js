@@ -43,8 +43,8 @@ angular.module('nodeDC.controllers', [])
         });
         $scope.showDescription = function () {
           $scope.toggleDescription = true;
-        }
+        };
         $scope.hideDescription = function () {
           $scope.toggleDescription = false;
-        }
+        };
     });

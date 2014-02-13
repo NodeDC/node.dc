@@ -34,7 +34,7 @@ angular.module('nodeDC', [
         url: '/meetups',
         templateUrl: 'partials/partialMeetups',
         controller: 'MeetupsCtrl'
-    })
+    });
 
     $urlRouterProvider.otherwise('/');
 

@@ -6,12 +6,12 @@
 angular.module('nodeDC.services', [])
     .value('version', '0.0.1')
     .factory('socket', function() {
-    	var socket = io.connect('http://localhost:3000');
+      var socket = io.connect('http://localhost:3000');
 
-    	return socket;
+      return socket;
     })
     .factory('Chat', function($rootScope, socket) {
-    	var lines = [];
+      var lines = [];
         socket.on('init', function(data) {
             data.lastMessages.forEach(function(line){
                 //add the user to the map with a random colorClass
@@ -23,13 +23,13 @@ angular.module('nodeDC.services', [])
             $rootScope.$apply();
             $('#irc_messages').scrollTop(9999999);
         });
-    	socket.on('message', function(data) {
+      socket.on('message', function(data) {
             data.color = getColorForUser(data.user);
-    		lines.push(data);
-    		console.log(lines);
-    		$rootScope.$apply();
+        lines.push(data);
+        console.log(lines);
+        $rootScope.$apply();
             $('#irc_messages').scrollTop(9999999);
-    	});
+      });
 
         var existingUsers = {};
         var colorClasses = [];
@@ -49,9 +49,9 @@ angular.module('nodeDC.services', [])
                     'user6','user7','user8','user9','user10'];
         }
 
-    	return {
-    		getLines: function() {
-    			return lines;
-    		}
-    	};
+      return {
+        getLines: function() {
+          return lines;
+        }
+      };
     });
