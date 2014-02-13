@@ -13,11 +13,6 @@
   "author": "Node.DC <@NodeDC>",
   "contributors": [
     {
-      "name": "Will Laurance",
-      "github": "wlaurance",
-      "email": "w.laurance@gmail.com"
-    },
-    {
       "name": "Matthew Chase Whittemore",
       "github": "mcwhittemore",
       "email": "mcwhittemore@gmail.com"
@@ -33,19 +28,9 @@
       "email": "josh@jfin.us"
     },
     {
-      "name": "",
-      "github": "KSolow",
-      "email": ""
-    },
-    {
-      "name": "",
-      "github": "sthalluri",
-      "email": ""
-    },
-    {
-      "name": "",
-      "github": "interpfister",
-      "email": ""
+      "name": "Wesley Cho",
+      "github": "wesleycho",
+      "email": "wesley.cho@gmail.com"
     }
   ],
   "license": "MIT",
