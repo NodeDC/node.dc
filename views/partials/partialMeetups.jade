@@ -1,7 +1,15 @@
-h2#header Meetups
-
-div(ng-controller='MeetupsCtrl')
-  p This is a list of upcoming meetups.
-
-  ul
-    li(ng-repeat="meetup in meetups") <a href="{{ meetup.event_url }}">{{meetup.name }} @ {{meetup.venue.name}} {{ meetup.time | date:'medium' }}</a><br> {{ meetup.description }}<br>{{ meetup }}
+div(ng-controller='MeetupsCtrl' ng-init="count=0")
+    h2#header Meetup
+    p This is a list of upcoming meetups.
+        ul.list-group
+            span(ng-repeat="meetup in meetups")
+                li(ng-repeat="meetup in meetups" class="list-group-item")
+                    a(href="{{ meetup.event_url }}")<b>{{meetup.name }}</b>
+                    |  @ {{meetup.venue.name}}<br /><em>{{ meetup.time | date:'medium' }}</em>
+                    a(ng-click="showDescription()" ng-hide="toggleDescription")<i class="fa fa-plus pull-right"></i>
+                    a(ng-click="hideDescription()" ng-show="toggleDescription")<i class="fa fa-minus pull-right"></i>
+                li(class="list-group-item" ng-show="toggleDescription")
+                    p
+                        b Description:
+                    blockquote
+                        <span ng-bind-html="meetup.description"></span>

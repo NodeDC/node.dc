@@ -6,6 +6,7 @@
 angular.module('nodeDC', [
     'ui.router',
     'ui.bootstrap',
+    'ngSanitize',
     'nodeDC.controllers',
     'nodeDC.filters',
     'nodeDC.services',
@@ -34,7 +35,7 @@ angular.module('nodeDC', [
         templateUrl: 'partials/partialMeetups',
         controller: 'MeetupsCtrl'
     })
-    
+
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);

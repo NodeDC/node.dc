@@ -33,6 +33,7 @@ angular.module('nodeDC.controllers', [])
     })
     .controller('MeetupsCtrl', function ($scope, $http) {
         'use strict';
+        $scope.toggleDescription = false;
         $http({
             method: 'GET',
             url: '/api/meetups'
@@ -40,4 +41,10 @@ angular.module('nodeDC.controllers', [])
         .success(function (data) {
             $scope.meetups = data.results;
         });
+        $scope.showDescription = function () {
+          $scope.toggleDescription = true;
+        }
+        $scope.hideDescription = function () {
+          $scope.toggleDescription = false;
+        }
     });
