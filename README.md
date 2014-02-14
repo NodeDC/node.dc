@@ -50,4 +50,4 @@ Changing DC one Node at a time.
 
 ## Contributors
 
-We are looking for contibutors! Please send us a [pull request](https://github.com/joshfinnie/node.dc/pulls) with your changes.
+We are looking for contibutors! Please send us a [pull request](https://github.com/NodeDC/node.dc/pulls) with your changes.
