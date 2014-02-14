@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/joshfinnie/node.dc.git"
+    "url": "https://github.com/NodeDC/node.dc.git"
   },
   "author": "Node.DC <@NodeDC>",
   "contributors": [
@@ -40,9 +40,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joshfinnie/node.dc/issues"
+    "url": "https://github.com/NodeDC/node.dc/issues"
   },
-  "homepage": "https://github.com/joshfinnie/node.dc",
+  "homepage": "https://github.com/NodeDC/node.dc",
   "engines": {
     "node": ">=0.10",
     "npm": ">=1.3"
