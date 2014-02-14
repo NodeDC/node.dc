@@ -30,16 +30,6 @@ Serve website:
 
 ## Development Ideas
 
-### Bower
-We have added `bower` as a development dependency and we can get new versions of `jQuery`, `Bootstrap`, and `Angular` easily through `bower install`.
-
-Once that command is run, the updated versions of the libraries will be found in `public/lib/`. Just overwrite the appropriate files:
-
-    $ cp -r public/lib/bootstrap/dist/ public/
-    $ cp -r public/lib/jquery/jquery.min.js public/js/
-    $ cp -r public/lib/angular/angular.min.js public/js/
-    $ cp -r public/lib/angular-route/angular-route.min.js public/js/
-
 ### Going Forward
 This website is leveraging both [Node.js](http://nodejs.org) and [Angular.js](http://angularjs.org/). Node.js will be used for an API interface to Angular.js so that we can use both of these technologies to their full advantages.
 
