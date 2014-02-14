@@ -17,4 +17,5 @@ results
 
 node_modules
 public/lib
+public/css/*min.css
 selenium
