@@ -9,7 +9,7 @@ var client = new irc.Client('chat.freenode.net', 'nodedc_bot', {
 var lastMessages = [];
 
 client.addListener('message#node.dc', function (from, message) {
-    onsole.log("message from irc: " + from + ' => #node.dc: ' + message);
+    console.log("message from irc: " + from + ' => #node.dc: ' + message);
     var message = {time:new Date(), message:message, user:from};
 	lastMessages.push(message);
 	if(lastMessages.length > 24){
