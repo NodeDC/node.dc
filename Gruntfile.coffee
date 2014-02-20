@@ -18,13 +18,27 @@ module.exports = (grunt) ->
         configFile: "coffeelint.json"
       files: ["Gruntfile.coffee"]
 
+    less:
+      options:
+        paths: ['public/css']
+        cleancss: true
+      src: 
+        expand: true
+        cwd:    "public/css"
+        src:    "*.less"
+        ext:    ".min.css"
+        dest: "public/css/"
+
     cssmin:
       combine:
         options:
           banner: "<%= meta.banner %>"
-        files: {
-          "public/css/app.min.css": ["public/css/app.css"]
-        }
+        minify:
+          expand: true,
+          cwd: 'public/css/',
+          src: ['*.css', '!*.min.css'],
+          dest: 'public/css/',
+          ext: '.min.css'
 
     protractor:
       angular:
@@ -32,7 +46,8 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks "grunt-contrib-jshint"
   grunt.loadNpmTasks "grunt-protractor-runner"
+  grunt.loadNpmTasks "grunt-contrib-less"
   grunt.loadNpmTasks "grunt-contrib-cssmin"
   grunt.loadNpmTasks "grunt-coffeelint"
 
-  grunt.registerTask "default", ["jshint", "protractor"]
+  grunt.registerTask "default", ["jshint", "less"]
