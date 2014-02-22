@@ -28,7 +28,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(require('connect-assets')({src:'public'}));
 app.use(app.router);
 app.use(express.errorHandler()); // For Development Purposes Only
 app.locals.pretty = true; // For Development Purposes Only
@@ -45,8 +45,6 @@ app.get('/partials/:name', routes.partials);
 app.get('/api/name', home.name);
 app.get('/api/meetups', meetup.meetups);
 
-// Redirect all others to the index (HTML5 history)
-app.get('*', routes.index);
 
 /*******************************************************************************
  * Start Server
