@@ -55,7 +55,8 @@
     "passport-local": "~0.1.6",
     "request": "~2.29.0",
     "irc": "~0.3.6",
-    "socket.io": "~0.9.16"
+    "socket.io": "~0.9.16",
+    "connect-assets": "~3.0.0-beta1"
   },
   "devDependencies": {
     "bower": "~1.2.7",
