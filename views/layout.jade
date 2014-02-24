@@ -24,15 +24,15 @@ html(ng-app="nodeDC")
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='/') Node.DC
+          a.navbar-brand(ui-sref="home") Node.DC
         .collapse.navbar-collapse
           ul.nav.navbar-nav
             li
-              a(href='#/about') About
+              a(ui-sref="about") About
             li
-              a(href="#/meetups") Meetups
+              a(ui-sref="meetups") Meetups
             li
-              a(href='#/contact') Contact
+              a(ui-sref="contact") Contact
           form.navbar-form.navbar-right
             .form-group
               input#username.form-control(type='text' placeholder='Username')
