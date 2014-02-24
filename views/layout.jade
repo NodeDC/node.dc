@@ -27,11 +27,11 @@ html(ng-app="nodeDC")
           a.navbar-brand(ui-sref="home") Node.DC
         .collapse.navbar-collapse
           ul.nav.navbar-nav
-            li
+            li(ui-sref-active="active")
               a(ui-sref="about") About
-            li
+            li(ui-sref-active="active")
               a(ui-sref="meetups") Meetups
-            li
+            li(ui-sref-active="active")
               a(ui-sref="contact") Contact
           form.navbar-form.navbar-right
             .form-group
