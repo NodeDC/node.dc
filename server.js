@@ -17,6 +17,7 @@ var app = module.exports = express();
 var http = require('http');
 var server = http.createServer(app);
 var socketio = require('socket.io').listen(server, {log: false});
+var config = require('./config');
 
 /*******************************************************************************
  * Configuration
@@ -54,5 +55,5 @@ server.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
 
-require('./routes/api/irc/irc')(socketio);
+require('./routes/api/irc/irc')(config, socketio);
 

@@ -1,5 +1,5 @@
 module.exports = {
 	'irc':{
-		'chatroom':'#node.dcdev'
+		'chatroom':'#node.dc'
 	}
 }
