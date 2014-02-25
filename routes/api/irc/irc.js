@@ -14,7 +14,7 @@ module.exports = function(config, server){
 
 	var sockets = new Array();
 
-	var client = new irc.Client('chat.freenode.net', 'nodedc_bot', {
+	var client = new irc.Client(config.irc.server, config.irc.bot_name, {
 	    channels: [config.irc.chatroom],
 	});
 
