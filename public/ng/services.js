@@ -6,7 +6,7 @@
 angular.module('nodeDC.services', [])
     .value('version', '0.0.1')
     .factory('socket', function() {
-      var socket = io.connect('http://localhost:3000');
+      var socket = io.connect('/');
 
       return socket;
     })
