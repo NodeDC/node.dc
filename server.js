@@ -3,6 +3,7 @@
  * Module Dependencies
  ******************************************************************************/
 var express = require('express');
+var passport = require('passport');
 var routes = require('./routes');
 var path = require('path');
 
@@ -11,6 +12,7 @@ var path = require('path');
  ******************************************************************************/
 var home = require('./routes/api/home');
 var meetup = require('./routes/api/meetup');
+var login = require('./routes/api/login');
 
 
 var app = module.exports = express();
@@ -29,10 +31,16 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
+app.use(express.cookieParser());
+app.use(express.session({secret: "secret"}));
 app.use(require('connect-assets')({src:'public'}));
 app.use(app.router);
 app.use(express.errorHandler()); // For Development Purposes Only
 app.locals.pretty = true; // For Development Purposes Only
+
+// Passport Configuration
+app.use(passport.initialize());
+app.use(passport.session());
 
 /*******************************************************************************
  * Routes

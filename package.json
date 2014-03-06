@@ -56,8 +56,9 @@
   "dependencies": {
     "express": "~3.4.4",
     "jade": "~0.35.0",
-    "passport": "~0.1.17",
+    "passport": "0.1.18",
     "passport-local": "~0.1.6",
+    "passport-meetup": "0.1.2",
     "request": "~2.29.0",
     "irc": "~0.3.6",
     "socket.io": "~0.9.16",
