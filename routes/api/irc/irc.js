@@ -28,6 +28,7 @@ module.exports = function(config, server){
 
 	  var client = new irc.Client(config.irc.server, config.irc.bot_name, {
 	      channels: [config.irc.chatroom],
+        retryCount: 10
 	  });
 
 	  var lastMessages = [];
