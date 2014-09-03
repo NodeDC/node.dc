@@ -3,36 +3,48 @@
  * Module Dependencies
  ******************************************************************************/
 var express = require('express');
-var routes = require('./routes');
 var path = require('path');
+var http = require('http');
+
+var routes = require('./routes');
 
 /*******************************************************************************
- * APIs
+ * API Routes
  ******************************************************************************/
 var home = require('./routes/api/home');
 var meetup = require('./routes/api/meetup');
 
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var methodOverride = require('method-override');
+var session = require('express-session');
+var bodyParser = require('body-parser');
+var multer = require('multer');
+var errorHandler = require('errorhandler');
 
 var app = module.exports = express();
-var http = require('http');
 var server = http.createServer(app);
-var socketio = require('socket.io').listen(server, {log: false});
 var config = require('./config');
 
 /*******************************************************************************
  * Configuration
  ******************************************************************************/
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
+app.use(favicon(__dirname + '/public/images/nodedc.png'));
+app.use(logger('dev'));
+app.use(methodOverride());
+app.use(session({ resave: true,
+                  saveUninitialized: true,
+                  secret: 'uwotm8' }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(multer());
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use(require('connect-assets')({src:'public'}));
-app.use(app.router);
-app.use(express.errorHandler()); // For Development Purposes Only
+
+app.use(errorHandler()); // For Development Purposes Only
 app.locals.pretty = true; // For Development Purposes Only
 
 /*******************************************************************************
@@ -51,10 +63,6 @@ app.get('/api/meetups', meetup.meetups);
 /*******************************************************************************
  * Start Server
  ******************************************************************************/
-server.listen(app.get('port'), function () {
-    'use strict';
+app.listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
 });
-
-require('./routes/api/irc/irc')(config, socketio);
-

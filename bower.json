@@ -18,11 +18,11 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.2.11",
-    "angular-bootstrap": "0.10.0",
-    "angular-sanitize": "1.2.12",
-    "angular-ui-router": "0.2.8-bowratic-tedium",
-    "bootstrap": "3.1.0",
-    "jquery": "1.11.0"
+    "angular": "~1.2.23",
+    "angular-bootstrap": "~0.11.0",
+    "angular-sanitize": "~1.2.23",
+    "angular-ui-router": "~0.2.11",
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.1"
   }
 }
