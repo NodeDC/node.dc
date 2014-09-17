@@ -24,8 +24,8 @@ html(ng-app="nodeDC")
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(ui-sref="home") Node.DC
-        .collapse.navbar-collapse
+          a.navbar-brand(ui-sref="home" ui-sref-active="active") Node.DC
+        .collapse.navbar-collapse.pull-right
           ul.nav.navbar-nav
             li(ui-sref-active="active")
               a(ui-sref="home") Home
@@ -35,16 +35,6 @@ html(ng-app="nodeDC")
               a(ui-sref="meetups") Meetups
             li(ui-sref-active="active")
               a(ui-sref="contact") Contact
-          form.navbar-form.navbar-right
-            .form-group
-              input#username.form-control(type='text' placeholder='Username')
-            .form-group
-              p |
-            .form-group
-              input#password.form-control(type='password' placeholder='Password')
-            .form-group
-              p |
-            button.btn.btn-success(type='submit' ng-click='userSignin()') Sign in
 
     .container
       block body

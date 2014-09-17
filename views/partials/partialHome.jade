@@ -1,9 +1,3 @@
 h2#header Home
-
 div(ng-controller='HomeCtrl')
     h3 Hello {{name}}
-    span #node.dc
-    .chat
-        #irc_messages.messages
-            .line(ng-repeat='line in lines')
-                <span class="time">[{{line.time | date: 'H:mm:ss' }}]</span> <span class="user {{line.color}}">&lt;{{line.user}}&gt;:</span> <span class="message">{{line.message}}</span>
