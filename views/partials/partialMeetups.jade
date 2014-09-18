@@ -1,4 +1,4 @@
-div(ng-controller='MeetupsCtrl' ng-init="count=0")
+div(ng-controller='MeetupsCtrl')
     h2#header Meetup
     p This is a list of upcoming meetups.
         ul.list-group
@@ -8,7 +8,7 @@ div(ng-controller='MeetupsCtrl' ng-init="count=0")
                     |  @ {{meetup.venue.name}}<br /><em>{{ meetup.time | date:'medium' }}</em>
                     a(ng-click="showDescription()" ng-hide="toggleDescription")<i class="fa fa-plus pull-right"></i>
                     a(ng-click="hideDescription()" ng-show="toggleDescription")<i class="fa fa-minus pull-right"></i>
-                li(class="list-group-item" ng-hide="toggleDescription{{$index}}")
+                li(class="list-group-item" ng-show="toggleDescription")
                     p
                         b Description:
                     blockquote
