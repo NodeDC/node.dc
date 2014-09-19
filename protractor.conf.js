@@ -1,7 +1,7 @@
 exports.config = {
   // The location of the selenium standalone server .jar file.
   // run `$ node_modules/protractor/bin/install_selenium_standalone`
-  seleniumServerJar: './selenium/selenium-server-standalone-2.37.0.jar',
+  seleniumServerJar: './selenium/selenium-server-standalone-2.43.1.jar',
   chromeDriver: './selenium/chromedriver',
   // If true, only chromedriver will be started, not a standalone selenium.
   // Tests for browsers other than chrome will not run.

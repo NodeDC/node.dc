@@ -1,1 +1,1 @@
-java -jar selenium/selenium-server-standalone-2.37.0.jar -Dwebdriver.chrome.driver=./selenium/chromedriver
+java -jar selenium/selenium-server-standalone-2.43.1.jar -D webdriver.chrome.driver=./selenium/chromedriver
