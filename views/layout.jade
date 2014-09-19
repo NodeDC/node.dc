@@ -16,6 +16,18 @@ html(ng-app="nodeDC")
       script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
       script(src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js")
   body
+    .loader
+      .logo-container
+        .hexbox
+          svg#Layer_1.bg-hex(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 882.77 1004.835', enable-background='new 0 0 882.77 1004.835', xml:space='preserve')
+            path(fill-rule='evenodd', clip-rule='evenodd', fill='#80BD01', stroke='#B3B3B3', stroke-miterlimit='10', d='M417.56,6.373c14.71-8.498,32.846-8.498,47.555,0l393.86,227.282c14.729,8.498,23.795,24.193,23.795,41.201v454.925c0,16.993-9.066,32.688-23.779,41.17l-393.86,227.5c-14.725,8.511-32.861,8.511-47.587,0l-393.768-227.5C9.066,762.47,0,746.775,0,729.782V274.842c0-16.993,9.066-32.688,23.792-41.186L417.56,6.373z')
+          svg#Layer_1.hex(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 882.77 1004.835', enable-background='new 0 0 882.77 1004.835', xml:space='preserve')
+            path(fill-rule='evenodd', clip-rule='evenodd', stroke='#B3B3B3', stroke-miterlimit='10', d='M417.56,6.373c14.71-8.498,32.846-8.498,47.555,0l393.86,227.282c14.729,8.498,23.795,24.193,23.795,41.201v454.925c0,16.993-9.066,32.688-23.779,41.17l-393.86,227.5c-14.725,8.511-32.861,8.511-47.587,0l-393.768-227.5C9.066,762.47,0,746.775,0,729.782V274.842c0-16.993,9.066-32.688,23.792-41.186L417.56,6.373z')
+        svg#Layer_1.d(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='200px', width='557.079px', height='999.367px', viewbox='0 0 557.079 999.367', enable-background='new 0 0 557.079 999.367', xml:space='preserve')
+          path(fill-rule='evenodd', clip-rule='evenodd', fill='#46483E', stroke='#000000', stroke-miterlimit='10', d='M393.8,1.9c-4.65-2.588-10.312-2.53-14.905,0.165c-4.592,2.694-7.413,7.617-7.413,12.938v381.239c0,3.746-2.004,7.22-5.252,9.097c-3.25,1.877-7.238,1.877-10.488,0l-62.223-35.848c-9.28-5.351-20.72-5.341-29.981,0.01L15.01,512.924C5.72,518.283,0,528.187,0,538.908v286.925c0,10.719,5.72,20.623,15.002,25.974l248.517,143.53c9.28,5.369,20.72,5.369,30.001,0.018l248.557-143.548c9.282-5.351,15.002-15.255,15.002-25.974V110.632c0-10.876-5.895-20.906-15.391-26.207L393.8,1.9zM370.743,731.545c0,2.686-1.438,5.156-3.756,6.499l-85.336,49.187c-2.315,1.341-5.154,1.341-7.471,0l-85.336-49.187c-2.325-1.343-3.754-3.813-3.754-6.499v-98.497c0-2.676,1.429-5.156,3.746-6.499l85.326-49.283c2.335-1.343,5.174-1.343,7.509,0l85.316,49.283c2.335,1.343,3.756,3.823,3.756,6.499V731.545z')
+        svg#Layer_1.c(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='1023.491px', height='994.614px', viewbox='0 0 1023.491 994.614', enable-background='new 0 0 1023.491 994.614', xml:space='preserve')
+          path(fill-rule='evenodd', clip-rule='evenodd', fill='#46483E', d='M308.993,0c-19.289,0-37.011,10.15-46.57,26.798L7.053,470.529C2.641,478.035,0.349,486.448,0,494.96c0,0.765,0,3.964,0,4.587c0.349,8.481,2.641,16.89,7.053,24.502l255.37,443.735c9.559,16.541,27.281,26.83,46.57,26.83l687.653-0.975c9.52,0,18.417-4.968,23.143-13.381c4.936-8.235,4.936-18.417,0-26.62L868.752,689.927c-9.868-16.68-27.385-26.83-46.499-26.83H501.007c-19.15,0-36.872-10.146-46.396-26.758l-64.677-112.29c-4.829-8.374-7.192-17.516-7.192-26.865c0-9.139,2.363-18.523,7.192-26.655l64.677-112.254c9.523-16.612,27.246-26.794,46.396-26.794h321.246c19.114,0,36.698-10.288,46.499-26.865l151.038-263.64c4.936-8.271,4.936-18.595,0-26.794c-4.726-8.167-13.623-13.313-23.143-13.313L308.993,0z')
+
     .navbar.navbar-inverse.navbar-fixed-top(role="navigation")
       .container
         .navbar-header
@@ -48,6 +60,7 @@ html(ng-app="nodeDC")
             &copy; 2014 - Node.DC
 
     != js(src='lib/jquery/dist/jquery.min.js')
+    != js(src='lib/velocity/velocity.min.js')
     != js(src='lib/angular/angular.min.js')
     != js(src='lib/angular-sanitize/angular-sanitize.min.js')
     != js(src='lib/angular-ui-router/release/angular-ui-router.min.js')
@@ -57,3 +70,4 @@ html(ng-app="nodeDC")
     != js(src='ng/controllers.js')
     != js(src='ng/filters.js')
     != js(src='ng/directives.js')
+    != js(src='js/loading-anim.js')
