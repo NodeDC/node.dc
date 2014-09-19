@@ -1,0 +1,67 @@
+svg {
+  width: 30%;
+  height: 100%;
+  min-height: 400px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+path { 
+  stroke: #46483e;
+}
+.logo-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: visible;
+}
+.hexbox {
+	position: relative;
+	width: 30%;
+	display: inline-block;
+}
+.hex, .bg-hex {
+	width: 100%;
+}
+.bg-hex {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 1;
+	transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+	fill-opacity: 1;
+}
+.hex {
+  fill: #F5F5F5;
+	fill-opacity: 0;
+	stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+	stroke-width: 10;
+}
+.hex path {
+	transform-origin: center center;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+}
+.d {
+	margin-top: -2.5%;
+	stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  stroke-width: 5;
+  fill-opacity: 0;
+}
+.c {
+	margin-left: -5%;
+	margin-top: 5%;
+	fill: #46483e;
+	stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  stroke-width: 8;
+  fill-opacity: 0;
+}
