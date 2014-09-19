@@ -60,6 +60,7 @@
     "errorhandler": "^1.1.1",
     "express": "^4.8.7",
     "express-session": "^1.7.6",
+    "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "jade": "^1.6.0",
     "method-override": "^2.2.0",
