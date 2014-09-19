@@ -25,9 +25,9 @@ $(document).ready(function(){
 	bg.velocity({scale: 50},{duration: 2000, delay: 4000, begin: function(){
 		hex.velocity({strokeOpacity: 0},{delay: 0})
 	},complete: function(){
-		// $('.loader').velocity({opacity:0},{duration: 400, delay: 0, complete: function(){
-		// 	$('.loader').remove();
-		// }})
+		$('.loader').velocity({opacity:0},{duration: 400, delay: 0, complete: function(){
+			$('.loader').remove();
+		}})
 	}});
   }, 500);
 	
