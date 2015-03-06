@@ -31,18 +31,21 @@ angular.module('nodeDC.controllers', [])
     })
     .controller('MeetupsCtrl', function ($scope, $http) {
         'use strict';
-        $scope.toggleDescription = false;
         $http({
             method: 'GET',
             url: '/api/meetups'
         })
         .success(function (data) {
-            $scope.meetups = data.results;
+            var results = data.results;
+            if (results) {
+                results.forEach(function(result) {
+                    result.visible = false;
+                });
+            }
+
+            $scope.meetups = results;
         });
-        $scope.showDescription = function () {
-          $scope.toggleDescription = true;
-        };
-        $scope.hideDescription = function () {
-          $scope.toggleDescription = false;
+        $scope.toggleVisibility = function (meetup) {
+            meetup.visible = !meetup.visible;
         };
     });
