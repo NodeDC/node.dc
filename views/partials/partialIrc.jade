@@ -1,0 +1,10 @@
+div(ng-controller='IrcCtrl')
+    h2#header IRC
+    p This is a snapshot of the most recent IRC messages.  Join the conversation at <a href="http://webchat.freenode.net/?channels=node.dc">freenode.net#node.dc</a>!
+        div(class='chat')
+            ul(class='messages')
+                li(class='' ng-repeat="message in messages track by $index")
+                    span(class='user{{($index%10) + 1}}') {{message.from}} 
+                    span(class='time') [{{message.sentAtFormatted}}]
+                    span : 
+                    span(class='message') {{message.body}}

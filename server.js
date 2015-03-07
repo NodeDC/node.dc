@@ -13,6 +13,7 @@ var routes = require('./routes');
  ******************************************************************************/
 var home = require('./routes/api/home');
 var meetup = require('./routes/api/meetup');
+var irc = require('./routes/api/irc');
 
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -58,6 +59,7 @@ app.get('/partials/:name', routes.partials);
 // JSON API
 app.get('/api/name', home.name);
 app.get('/api/meetups', meetup.meetups);
+app.get('/api/irc', irc.messages);
 
 
 /*******************************************************************************
