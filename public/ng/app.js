@@ -34,6 +34,11 @@ angular.module('nodeDC', [
         url: '/meetups',
         templateUrl: 'partials/partialMeetups',
         controller: 'MeetupsCtrl'
+    })
+    .state('irc', {
+        url: '/irc',
+        templateUrl: 'partials/partialIrc',
+        controller: 'IrcCtrl'
     });
 
     $urlRouterProvider.otherwise('/');

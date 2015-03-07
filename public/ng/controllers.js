@@ -48,4 +48,28 @@ angular.module('nodeDC.controllers', [])
         $scope.toggleVisibility = function (meetup) {
             meetup.visible = !meetup.visible;
         };
+    })
+    .controller('IrcCtrl', function ($scope, $http) {
+        'use strict';
+        $http({
+            method: 'GET',
+            url: '/api/irc'
+        })
+        .success(function (data) {
+            if (data) {
+                data.forEach(function(result) {
+                    var sentAt = new Date(result.sent_at);
+                    var currentTimeZoneOffsetInHours = sentAt.getTimezoneOffset() / 60;
+                    if (currentTimeZoneOffsetInHours > 0) {
+                        currentTimeZoneOffsetInHours = "+" + currentTimeZoneOffsetInHours;
+                    }
+                    var sentAtFormattedDate = (sentAt.getMonth()+1) + "/" + sentAt.getDate()    + "/" + sentAt.getFullYear();
+                    var sentAtFormattedTime = sentAt.getHours()     + ":" + sentAt.getMinutes() + ":" + sentAt.getSeconds() + " (UTC" + currentTimeZoneOffsetInHours + ")";
+                    result.sentAtFormatted  = sentAtFormattedDate   + " " + sentAtFormattedTime;
+                    result.sentAt = sentAt;
+                });
+            }
+
+            $scope.messages = data;
+        });
     });
