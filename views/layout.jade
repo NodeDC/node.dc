@@ -59,7 +59,7 @@ html(ng-app="nodeDC")
           a(href="https://github.com/NodeDC/node.dc") Node.DC Web App: v
             span(app-version)
           span.pull-right
-            &copy; 2014 - Node.DC
+            &copy; <script>document.write(new Date().getFullYear())</script><noscript>2015</noscript> - Node.DC
 
     != js(src='lib/jquery/dist/jquery.min.js')
     != js(src='lib/velocity/velocity.min.js')
