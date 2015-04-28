@@ -1,5 +1,7 @@
 # Node.dc Community Website
 
+[![Join the chat at https://gitter.im/NodeDC/node.dc](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/NodeDC/node.dc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Thoughts and ideas for node.dc website.
 
 ## Core Team
